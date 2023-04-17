@@ -26,7 +26,7 @@ This package uses the logging module.
 
 .. GENERATED FROM PYTHON SOURCE LINES 10-12
 
-The logger and its utilities can be imported from the ``template`` package
+The logger and its utilities can be imported from the ``meg_tests`` package
 namespace.
 
 .. GENERATED FROM PYTHON SOURCE LINES 12-20
@@ -38,7 +38,7 @@ namespace.
     from pathlib import Path
     from tempfile import TemporaryDirectory
 
-    from template import add_file_handler, logger, set_log_level
+    from meg_tests import add_file_handler, logger, set_log_level
 
 
 
@@ -83,7 +83,7 @@ default, the logger is set to the ``WARNING`` level.
 
 .. GENERATED FROM PYTHON SOURCE LINES 34-36
 
-The function `~template.set_log_level` can be used to edit the level of the
+The function `~meg_tests.set_log_level` can be used to edit the level of the
 logger.
 
 .. GENERATED FROM PYTHON SOURCE LINES 36-40
@@ -102,7 +102,7 @@ logger.
 
  .. code-block:: none
 
-    [00_logging:<module>:38] DEBUG: Log that will now be displayed. (2023-04-17 13:25:47,010)
+    [00_logging:<module>:38] DEBUG: Log that will now be displayed. (2023-04-17 13:46:34,693)
 
 
 
@@ -111,8 +111,8 @@ logger.
 
 By default, the logger has one `~logging.StreamHandler` which outputs to
 ``sys.stdout``. The level of both the logger and of this first handler can be
-changed with `~template.set_log_level`.
-Additional file handlers can be added with `~template.add_file_handler`.
+changed with `~meg_tests.set_log_level`.
+Additional file handlers can be added with `~meg_tests.add_file_handler`.
 Each handler can be set to a different level than the logger.
 
 .. note::
@@ -139,7 +139,7 @@ Each handler can be set to a different level than the logger.
 
  .. code-block:: none
 
-    [00_logging:<module>:55] DEBUG: Log displayed but not saved to file. (2023-04-17 13:25:47,062)
+    [00_logging:<module>:55] DEBUG: Log displayed but not saved to file. (2023-04-17 13:46:34,733)
     [00_logging.<module>] INFO: Log displayed and saved to file.
 
 
@@ -209,7 +209,7 @@ while it might be mantadory depending on the situation on Windows.
 
  .. code-block:: none
 
-    [<StreamHandler (NOTSET)>, <FileHandler /tmp/tmpfk9rjhoz/mylogs.log (INFO)>]
+    [<StreamHandler (NOTSET)>, <FileHandler /tmp/tmppoke3sfx/mylogs.log (INFO)>]
 
 
 
@@ -217,7 +217,7 @@ while it might be mantadory depending on the situation on Windows.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.508 seconds)
+   **Total running time of the script:** ( 0 minutes  0.383 seconds)
 
 **Estimated memory usage:**  9 MB
 

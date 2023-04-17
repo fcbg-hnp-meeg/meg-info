@@ -1,0 +1,9 @@
+﻿meg\_tests.add\_file\_handler
+=============================
+
+.. currentmodule:: meg_tests
+
+.. autofunction:: add_file_handler
+
+.. minigallery:: meg_tests.add_file_handler
+    :add-heading:
