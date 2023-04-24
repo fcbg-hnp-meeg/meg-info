@@ -1,9 +1,0 @@
-﻿meg\_tests.set\_log\_level
-==========================
-
-.. currentmodule:: meg_tests
-
-.. autofunction:: set_log_level
-
-.. minigallery:: meg_tests.set_log_level
-    :add-heading:

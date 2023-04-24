@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Changelog" href="../../changes/index.html" /><link rel="prev" title="Tutorials" href="index.html" />
 
-    <!-- Generated with Sphinx 6.1.3 and Furo 2023.03.27 -->
-        <title>Logging - meg_tests</title>
+    <!-- Generated with Sphinx 6.2.0 and Furo 2023.03.27 -->
+        <title>Logging - meg_info</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -129,7 +129,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">meg_tests</div></a>
+      <a href="../../index.html"><div class="brand">meg_info</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -152,7 +152,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
-  <span class="sidebar-brand-text">meg_tests</span>
+  <span class="sidebar-brand-text">meg_info</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -163,8 +163,8 @@
   <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../api/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../api/logging.html">Logging</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../api/generated/meg_tests.add_file_handler.html">meg_tests.add_file_handler</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/generated/meg_tests.set_log_level.html">meg_tests.set_log_level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/generated/meg_info.add_file_handler.html">meg_info.add_file_handler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/generated/meg_info.set_log_level.html">meg_info.set_log_level</a></li>
 </ul>
 </li>
 </ul>
@@ -219,13 +219,13 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="logging">
 <span id="sphx-glr-generated-tutorials-00-logging-py"></span><h1>Logging<a class="headerlink" href="#logging" title="Permalink to this heading">#</a></h1>
 <p>This package uses the logging module.</p>
-<p>The logger and its utilities can be imported from the <code class="docutils literal notranslate"><span class="pre">meg_tests</span></code> package
+<p>The logger and its utilities can be imported from the <code class="docutils literal notranslate"><span class="pre">meg_info</span></code> package
 namespace.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="pathlib.Path" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class"><span class="n">Path</span></a>
 <span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <a href="https://docs.python.org/3/library/tempfile.html#tempfile.TemporaryDirectory" title="tempfile.TemporaryDirectory" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-class"><span class="n">TemporaryDirectory</span></a>
 
-<span class="kn">from</span> <span class="nn">meg_tests</span> <span class="kn">import</span> <a href="../../api/generated/meg_tests.add_file_handler.html#meg_tests.add_file_handler" title="meg_tests.add_file_handler" class="sphx-glr-backref-module-meg_tests sphx-glr-backref-type-py-function"><span class="n">add_file_handler</span></a><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <a href="../../api/generated/meg_tests.set_log_level.html#meg_tests.set_log_level" title="meg_tests.set_log_level" class="sphx-glr-backref-module-meg_tests sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a>
+<span class="kn">from</span> <span class="nn">meg_info</span> <span class="kn">import</span> <a href="../../api/generated/meg_info.add_file_handler.html#meg_info.add_file_handler" title="meg_info.add_file_handler" class="sphx-glr-backref-module-meg_info sphx-glr-backref-type-py-function"><span class="n">add_file_handler</span></a><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <a href="../../api/generated/meg_info.set_log_level.html#meg_info.set_log_level" title="meg_info.set_log_level" class="sphx-glr-backref-module-meg_info sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a>
 </pre></div>
 </div>
 <p>The logger can be used to send logs at different levels:
@@ -244,19 +244,19 @@ The level &#39;ERROR&#39; corresponds to the value 40.
 [00_logging.&lt;module&gt;] WARNING: Log that will be displayed.
 </pre></div>
 </div>
-<p>The function <a class="reference internal" href="../../api/generated/meg_tests.set_log_level.html#meg_tests.set_log_level" title="meg_tests.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a> can be used to edit the level of the
+<p>The function <a class="reference internal" href="../../api/generated/meg_info.set_log_level.html#meg_info.set_log_level" title="meg_info.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a> can be used to edit the level of the
 logger.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/generated/meg_tests.set_log_level.html#meg_tests.set_log_level" title="meg_tests.set_log_level" class="sphx-glr-backref-module-meg_tests sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a><span class="p">(</span><span class="s2">&quot;DEBUG&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/generated/meg_info.set_log_level.html#meg_info.set_log_level" title="meg_info.set_log_level" class="sphx-glr-backref-module-meg_info sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a><span class="p">(</span><span class="s2">&quot;DEBUG&quot;</span><span class="p">)</span>
 <a href="https://docs.python.org/3/library/logging.html#logging.Logger.debug" title="logging.Logger.debug" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-method"><span class="n">logger</span><span class="o">.</span><span class="n">debug</span></a><span class="p">(</span><span class="s2">&quot;Log that will now be displayed.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[00_logging:&lt;module&gt;:38] DEBUG: Log that will now be displayed. (2023-04-17 14:57:26,640)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[00_logging:&lt;module&gt;:38] DEBUG: Log that will now be displayed. (2023-04-24 08:50:16,081)
 </pre></div>
 </div>
 <p>By default, the logger has one <a class="reference external" href="https://docs.python.org/3/library/logging.handlers.html#logging.StreamHandler" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> which outputs to
 <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>. The level of both the logger and of this first handler can be
-changed with <a class="reference internal" href="../../api/generated/meg_tests.set_log_level.html#meg_tests.set_log_level" title="meg_tests.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a>.
-Additional file handlers can be added with <a class="reference internal" href="../../api/generated/meg_tests.add_file_handler.html#meg_tests.add_file_handler" title="meg_tests.add_file_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_file_handler</span></code></a>.
+changed with <a class="reference internal" href="../../api/generated/meg_info.set_log_level.html#meg_info.set_log_level" title="meg_info.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a>.
+Additional file handlers can be added with <a class="reference internal" href="../../api/generated/meg_info.add_file_handler.html#meg_info.add_file_handler" title="meg_info.add_file_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_file_handler</span></code></a>.
 Each handler can be set to a different level than the logger.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -265,12 +265,12 @@ saved to any text file, e.g. a <code class="docutils literal notranslate"><span 
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/tempfile.html#tempfile.TemporaryDirectory" title="tempfile.TemporaryDirectory" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">directory</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/tempfile.html#tempfile.TemporaryDirectory" title="tempfile.TemporaryDirectory" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-class"><span class="n">TemporaryDirectory</span></a><span class="p">()</span>
 <a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="pathlib.Path" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class"><span class="n">Path</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">directory</span><span class="o">.</span><span class="n">name</span></a><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;mylogs.log&quot;</span>
-<a href="../../api/generated/meg_tests.add_file_handler.html#meg_tests.add_file_handler" title="meg_tests.add_file_handler" class="sphx-glr-backref-module-meg_tests sphx-glr-backref-type-py-function"><span class="n">add_file_handler</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file</span></a><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">)</span>  <span class="c1"># different level than the logger</span>
+<a href="../../api/generated/meg_info.add_file_handler.html#meg_info.add_file_handler" title="meg_info.add_file_handler" class="sphx-glr-backref-module-meg_info sphx-glr-backref-type-py-function"><span class="n">add_file_handler</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file</span></a><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">)</span>  <span class="c1"># different level than the logger</span>
 <a href="https://docs.python.org/3/library/logging.html#logging.Logger.debug" title="logging.Logger.debug" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-method"><span class="n">logger</span><span class="o">.</span><span class="n">debug</span></a><span class="p">(</span><span class="s2">&quot;Log displayed but not saved to file.&quot;</span><span class="p">)</span>
 <a href="https://docs.python.org/3/library/logging.html#logging.Logger.info" title="logging.Logger.info" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-method"><span class="n">logger</span><span class="o">.</span><span class="n">info</span></a><span class="p">(</span><span class="s2">&quot;Log displayed and saved to file.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[00_logging:&lt;module&gt;:55] DEBUG: Log displayed but not saved to file. (2023-04-17 14:57:26,680)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[00_logging:&lt;module&gt;:55] DEBUG: Log displayed but not saved to file. (2023-04-24 08:50:16,137)
 [00_logging.&lt;module&gt;] INFO: Log displayed and saved to file.
 </pre></div>
 </div>
@@ -301,10 +301,10 @@ while it might be mantadory depending on the situation on Windows.</p>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">logger</span><span class="o">.</span><span class="n">handlers</span></a><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;StreamHandler (NOTSET)&gt;, &lt;FileHandler /tmp/tmp8ljez7g3/mylogs.log (INFO)&gt;]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;StreamHandler (NOTSET)&gt;, &lt;FileHandler /tmp/tmp0t7tmkee/mylogs.log (INFO)&gt;]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.394 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.556 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  9 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-tutorials-00-logging-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
@@ -354,7 +354,7 @@ while it might be mantadory depending on the situation on Windows.</p>
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link " href="https://github.com/mscheltienne/meg_tests" aria-label="GitHub">
+              <a class="muted-link " href="https://github.com/fcbg-hnp-meeg/meg_info" aria-label="GitHub">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
                 </svg>
