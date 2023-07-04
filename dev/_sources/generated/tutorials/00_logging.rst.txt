@@ -102,7 +102,7 @@ logger.
 
  .. code-block:: none
 
-    [00_logging:<module>:38] DEBUG: Log that will now be displayed. (2023-07-04 08:58:06,492)
+    [00_logging:<module>:38] DEBUG: Log that will now be displayed. (2023-07-04 10:03:43,223)
 
 
 
@@ -139,7 +139,7 @@ Each handler can be set to a different level than the logger.
 
  .. code-block:: none
 
-    [00_logging:<module>:55] DEBUG: Log displayed but not saved to file. (2023-07-04 08:58:06,539)
+    [00_logging:<module>:55] DEBUG: Log displayed but not saved to file. (2023-07-04 10:03:43,269)
     [00_logging.<module>] INFO: Log displayed and saved to file.
 
 
@@ -209,7 +209,7 @@ while it might be mantadory depending on the situation on Windows.
 
  .. code-block:: none
 
-    [<StreamHandler (NOTSET)>, <FileHandler /tmp/tmputglx4k1/mylogs.log (INFO)>]
+    [<StreamHandler (NOTSET)>, <FileHandler /tmp/tmplr0g0qtw/mylogs.log (INFO)>]
 
 
 
@@ -217,7 +217,7 @@ while it might be mantadory depending on the situation on Windows.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.466 seconds)
+   **Total running time of the script:** ( 0 minutes  0.457 seconds)
 
 **Estimated memory usage:**  9 MB
 

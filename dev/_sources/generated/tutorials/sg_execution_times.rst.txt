@@ -6,8 +6,8 @@
 
 Computation times
 =================
-**00:00.466** total execution time for **generated_tutorials** files:
+**00:00.457** total execution time for **generated_tutorials** files:
 
 +-----------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_generated_tutorials_00_logging.py` (``00_logging.py``) | 00:00.466 | 8.8 MB |
+| :ref:`sphx_glr_generated_tutorials_00_logging.py` (``00_logging.py``) | 00:00.457 | 8.8 MB |
 +-----------------------------------------------------------------------+-----------+--------+
