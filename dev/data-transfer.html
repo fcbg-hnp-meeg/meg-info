@@ -298,7 +298,23 @@ Windows</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 macOS</label><div class="sd-tab-content docutils">
-<p>WIP</p>
+<p>On macOS, <code class="docutils literal notranslate"><span class="pre">Finder</span></code> can connect to network share. After opening it, hit
+<code class="docutils literal notranslate"><span class="pre">Cmd</span> <span class="pre">+</span> <span class="pre">K</span></code>, or select <code class="docutils literal notranslate"><span class="pre">Go</span></code> and <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">Server...</span></code> to open the
+corresponding pop-up. In the address field, enter <code class="docutils literal notranslate"><span class="pre">smb://$(address)</span></code> where
+<code class="docutils literal notranslate"><span class="pre">$(address)</span></code> is replaced with the network share address. For instance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>smb://fcbgnasc.campusbiotech.ch/fcbgdata
+</pre></div>
+</div>
+<img alt="_images/macos-address-dark.png" class="only-dark" src="_images/macos-address-dark.png" />
+<img alt="_images/macos-address-light.png" class="only-light" src="_images/macos-address-light.png" />
+<p>A pop-up will request your credentials. Select <code class="docutils literal notranslate"><span class="pre">Registered</span> <span class="pre">User</span></code>, enter your
+username and password.</p>
+<img alt="_images/macos-credentials-dark.png" class="only-dark" src="_images/macos-credentials-dark.png" />
+<img alt="_images/macos-credentials-light.png" class="only-light" src="_images/macos-credentials-light.png" />
+<p>The network share is now mounted and appears in the left pane as an external
+drive.</p>
+<img alt="_images/macos-connected-dark.png" class="only-dark" src="_images/macos-connected-dark.png" />
+<img alt="_images/macos-connected-light.png" class="only-light" src="_images/macos-connected-light.png" />
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
