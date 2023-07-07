@@ -286,7 +286,9 @@ example, for the share <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 <p>Once the address and credentials are known, mounting the network share differs depending
-on the OS.</p>
+on the OS. On the <code class="docutils literal notranslate"><span class="pre">meguser</span></code> account of the <a class="reference internal" href="stim-pc.html#stimulation-pc"><span class="std std-ref">Stimulation PC</span></a> and
+<a class="reference internal" href="data-analysis-pc.html#data-analysis-pc-dana"><span class="std std-ref">Data analysis PC (DANA)</span></a>, you can find a PDF describing the
+mounting procedure on the desktop.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
@@ -307,7 +309,36 @@ For an Ubuntu-based distribution, the network share can be mounted from the
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>smbclient
 </pre></div>
 </div>
-<p>WIP - nautilus picture</p>
+<p>In the left pane of the file explorer, select <code class="docutils literal notranslate"><span class="pre">Other</span> <span class="pre">locations</span></code>. At the
+bottom, in the field <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">Server</span></code>, enter <code class="docutils literal notranslate"><span class="pre">smb://$(address)</span></code> where
+<code class="docutils literal notranslate"><span class="pre">$(address)</span></code> is replaced with the network share address. For instance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>smb://fcbgnasc.campusbiotech.ch/fcbgdata
+</pre></div>
+</div>
+<img alt="_images/linux-address-dark.png" class="only-dark" src="_images/linux-address-dark.png" />
+<img alt="_images/linux-address-light.png" class="only-light" src="_images/linux-address-light.png" />
+<p>A pop-up will request your credentials. Select <code class="docutils literal notranslate"><span class="pre">Registered</span> <span class="pre">User</span></code>, enter your
+username, domain (<code class="docutils literal notranslate"><span class="pre">campusbiotech.ch</span></code>, <code class="docutils literal notranslate"><span class="pre">epfl.ch</span></code> or <code class="docutils literal notranslate"><span class="pre">unige.ch</span></code>) and
+password.</p>
+<img alt="_images/linux-credentials-dark.png" class="only-dark" src="_images/linux-credentials-dark.png" />
+<img alt="_images/linux-credentials-light.png" class="only-light" src="_images/linux-credentials-light.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On the <a class="reference internal" href="stim-pc.html#stimulation-pc"><span class="std std-ref">Stimulation PC</span></a> or the
+<a class="reference internal" href="data-analysis-pc.html#data-analysis-pc-dana"><span class="std std-ref">Data analysis PC (DANA)</span></a>, do not save the password.
+Please select <code class="docutils literal notranslate"><span class="pre">Forget</span> <span class="pre">password</span> <span class="pre">immediately</span></code> or <code class="docutils literal notranslate"><span class="pre">Remember</span> <span class="pre">password</span> <span class="pre">until</span>
+<span class="pre">you</span> <span class="pre">logout</span></code>.</p>
+</div>
+<p>The network share is now mounted and appears in the left pane as an external
+drive.</p>
+<img alt="_images/linux-connected-dark.png" class="only-dark" src="_images/linux-connected-dark.png" />
+<img alt="_images/linux-connected-light.png" class="only-light" src="_images/linux-connected-light.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On the <a class="reference internal" href="stim-pc.html#stimulation-pc"><span class="std std-ref">Stimulation PC</span></a> or the
+<a class="reference internal" href="data-analysis-pc.html#data-analysis-pc-dana"><span class="std std-ref">Data analysis PC (DANA)</span></a>, please eject (disconnect)
+the network share when you are leaving.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want to mount the network share automatically, e.g. on boot, you can
@@ -338,12 +369,6 @@ network is connected.</p></li>
 </ul>
 </div>
 </div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On the <code class="docutils literal notranslate"><span class="pre">meguser</span></code> account of the <a class="reference internal" href="stim-pc.html#stimulation-pc"><span class="std std-ref">Stimulation PC</span></a> and
-<a class="reference internal" href="data-analysis-pc.html#data-analysis-pc-dana"><span class="std std-ref">Data analysis PC (DANA)</span></a>, you can find a PDF describing the
-mounting procedure on the desktop.</p>
 </div>
 </section>
 </section>
