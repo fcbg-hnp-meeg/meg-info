@@ -262,7 +262,7 @@ FCBG</label><div class="sd-tab-content docutils">
 <a class="reference internal" href="data-analysis-pc.html#data-analysis-pc-dana"><span class="std std-ref">Data analysis PC (DANA)</span></a>, the domain is
 <code class="docutils literal notranslate"><span class="pre">campusbiotech.ch</span></code>. For example, for the share <code class="docutils literal notranslate"><span class="pre">0000_CBT_EPFL_XXXXXX</span></code>, the
 address is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fcbgnas.campusbiotech.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fcbgnasc.campusbiotech.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 </pre></div>
 </div>
 </div>
@@ -271,7 +271,7 @@ address is:</p>
 EPFL</label><div class="sd-tab-content docutils">
 <p>If you are connected to the EPFL network, the domain is <code class="docutils literal notranslate"><span class="pre">epfl.ch</span></code>. For
 example, for the share <code class="docutils literal notranslate"><span class="pre">0000_CBT_EPFL_XXXXXX</span></code>, the address is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fcbgnas.epfl.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fcbgnasc.epfl.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 </pre></div>
 </div>
 </div>
@@ -280,13 +280,65 @@ example, for the share <code class="docutils literal notranslate"><span class="p
 UniGE</label><div class="sd-tab-content docutils">
 <p>If you are connected to the UniGE network, the domain is <code class="docutils literal notranslate"><span class="pre">unige.ch</span></code>. For
 example, for the share <code class="docutils literal notranslate"><span class="pre">0000_CBT_EPFL_XXXXXX</span></code>, the address is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fcbgnas.unige.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fcbgnasc.unige.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 </pre></div>
 </div>
 </div>
 </div>
 <p>Once the address and credentials are known, mounting the network share differs depending
 on the OS.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Windows</label><div class="sd-tab-content docutils">
+<p>WIP</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+macOS</label><div class="sd-tab-content docutils">
+<p>WIP</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Linux</label><div class="sd-tab-content docutils">
+<p>Mounting the network share might differ depending on your Linux distribution.
+For an Ubuntu-based distribution, the network share can be mounted from the
+<code class="docutils literal notranslate"><span class="pre">nautilus</span></code> file explorer. It requires <code class="docutils literal notranslate"><span class="pre">smbclient</span></code> to be installed.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>smbclient
+</pre></div>
+</div>
+<p>WIP - nautilus picture</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to mount the network share automatically, e.g. on boot, you can
+edit <code class="docutils literal notranslate"><span class="pre">/etc/fstab</span></code> and use <code class="docutils literal notranslate"><span class="pre">cifs</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cifs-utils
+sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/Isilon<span class="w">  </span><span class="c1"># location in which the share is mounted</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/etc/fstab
+</pre></div>
+</div>
+<p>In the <code class="docutils literal notranslate"><span class="pre">fstab</span></code>, add a line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//fcbgnasc.<span class="k">$(</span>network<span class="k">)</span>.ch/fcbgdata/<span class="k">$(</span>share<span class="k">)</span><span class="w">  </span>/mnt/Isilon<span class="w">  </span>cifs<span class="w">  </span><span class="nv">credentials</span><span class="o">=</span>/root/.smbcredentials,uid<span class="o">=</span><span class="k">$(</span>user<span class="k">)</span>,gid<span class="o">=</span><span class="k">$(</span>user<span class="k">)</span>,file_mode<span class="o">=</span><span class="m">0770</span>,dir_mode<span class="o">=</span><span class="m">0770</span><span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">0</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">$(network)</span></code> is replaced by the network you are connected to,
+<code class="docutils literal notranslate"><span class="pre">$(share)</span></code> is replaced by the share name, <code class="docutils literal notranslate"><span class="pre">$(user)</span></code> is replaced by your
+username. The credentials have to be defined in <code class="docutils literal notranslate"><span class="pre">/root/.smbcredentials</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">username</span><span class="o">=</span>...
+<span class="nv">password</span><span class="o">=</span>...
+<span class="nv">domain</span><span class="o">=</span>...<span class="w">  </span><span class="c1"># campusbiotech.ch, epfl.ch or unige.ch</span>
+</pre></div>
+</div>
+<p>If you are using <code class="docutils literal notranslate"><span class="pre">systemd</span></code>, you can add the flags:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x-systemd.automount</span></code> to automatically mount the share if it was not
+already available when you navigate to <code class="docutils literal notranslate"><span class="pre">/mnt/Isilon</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x-systemd.after=network-online.target</span></code> to mount only after the target
+network is connected.</p></li>
+</ul>
+</div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On the <code class="docutils literal notranslate"><span class="pre">meguser</span></code> account of the <a class="reference internal" href="stim-pc.html#stimulation-pc"><span class="std std-ref">Stimulation PC</span></a> and
