@@ -1,9 +1,0 @@
-﻿meg\_info.add\_file\_handler
-============================
-
-.. currentmodule:: meg_info
-
-.. autofunction:: add_file_handler
-
-.. minigallery:: meg_info.add_file_handler
-    :add-heading:

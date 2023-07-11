@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="Tutorials" href="index.html" />
 
     <!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
-        <title>Logging - meg-info</title>
+        <title>Logging - meg-wiki</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -129,7 +129,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">meg-info</div></a>
+      <a href="../../index.html"><div class="brand">meg-wiki</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -187,8 +187,8 @@
 <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../api/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../api/logging.html">Logging</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Logging</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../api/generated/meg_info.add_file_handler.html">meg_info.add_file_handler</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/generated/meg_info.set_log_level.html">meg_info.set_log_level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/generated/meg_wiki.add_file_handler.html">meg_wiki.add_file_handler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/generated/meg_wiki.set_log_level.html">meg_wiki.set_log_level</a></li>
 </ul>
 </li>
 </ul>
@@ -239,13 +239,13 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="logging">
 <span id="sphx-glr-generated-tutorials-00-logging-py"></span><h1>Logging<a class="headerlink" href="#logging" title="Permalink to this heading">#</a></h1>
 <p>This package uses the logging module.</p>
-<p>The logger and its utilities can be imported from the <code class="docutils literal notranslate"><span class="pre">meg_info</span></code> package
+<p>The logger and its utilities can be imported from the <code class="docutils literal notranslate"><span class="pre">meg_wiki</span></code> package
 namespace.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="pathlib.Path" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class"><span class="n">Path</span></a>
 <span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <a href="https://docs.python.org/3/library/tempfile.html#tempfile.TemporaryDirectory" title="tempfile.TemporaryDirectory" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-class"><span class="n">TemporaryDirectory</span></a>
 
-<span class="kn">from</span> <span class="nn">meg_info</span> <span class="kn">import</span> <a href="../../api/generated/meg_info.add_file_handler.html#meg_info.add_file_handler" title="meg_info.add_file_handler" class="sphx-glr-backref-module-meg_info sphx-glr-backref-type-py-function"><span class="n">add_file_handler</span></a><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <a href="../../api/generated/meg_info.set_log_level.html#meg_info.set_log_level" title="meg_info.set_log_level" class="sphx-glr-backref-module-meg_info sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a>
+<span class="kn">from</span> <span class="nn">meg_wiki</span> <span class="kn">import</span> <a href="../../api/generated/meg_wiki.add_file_handler.html#meg_wiki.add_file_handler" title="meg_wiki.add_file_handler" class="sphx-glr-backref-module-meg_wiki sphx-glr-backref-type-py-function"><span class="n">add_file_handler</span></a><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <a href="../../api/generated/meg_wiki.set_log_level.html#meg_wiki.set_log_level" title="meg_wiki.set_log_level" class="sphx-glr-backref-module-meg_wiki sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a>
 </pre></div>
 </div>
 <p>The logger can be used to send logs at different levels:
@@ -264,19 +264,19 @@ The level &#39;ERROR&#39; corresponds to the value 40.
 [00_logging.&lt;module&gt;] WARNING: Log that will be displayed.
 </pre></div>
 </div>
-<p>The function <a class="reference internal" href="../../api/generated/meg_info.set_log_level.html#meg_info.set_log_level" title="meg_info.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a> can be used to edit the level of the
+<p>The function <a class="reference internal" href="../../api/generated/meg_wiki.set_log_level.html#meg_wiki.set_log_level" title="meg_wiki.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a> can be used to edit the level of the
 logger.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/generated/meg_info.set_log_level.html#meg_info.set_log_level" title="meg_info.set_log_level" class="sphx-glr-backref-module-meg_info sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a><span class="p">(</span><span class="s2">&quot;DEBUG&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/generated/meg_wiki.set_log_level.html#meg_wiki.set_log_level" title="meg_wiki.set_log_level" class="sphx-glr-backref-module-meg_wiki sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a><span class="p">(</span><span class="s2">&quot;DEBUG&quot;</span><span class="p">)</span>
 <a href="https://docs.python.org/3/library/logging.html#logging.Logger.debug" title="logging.Logger.debug" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-method"><span class="n">logger</span><span class="o">.</span><span class="n">debug</span></a><span class="p">(</span><span class="s2">&quot;Log that will now be displayed.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[00_logging:&lt;module&gt;:38] DEBUG: Log that will now be displayed. (2023-07-11 14:48:58,713)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[00_logging:&lt;module&gt;:38] DEBUG: Log that will now be displayed. (2023-07-11 15:14:56,522)
 </pre></div>
 </div>
 <p>By default, the logger has one <a class="reference external" href="https://docs.python.org/3/library/logging.handlers.html#logging.StreamHandler" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> which outputs to
 <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>. The level of both the logger and of this first handler can be
-changed with <a class="reference internal" href="../../api/generated/meg_info.set_log_level.html#meg_info.set_log_level" title="meg_info.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a>.
-Additional file handlers can be added with <a class="reference internal" href="../../api/generated/meg_info.add_file_handler.html#meg_info.add_file_handler" title="meg_info.add_file_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_file_handler</span></code></a>.
+changed with <a class="reference internal" href="../../api/generated/meg_wiki.set_log_level.html#meg_wiki.set_log_level" title="meg_wiki.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a>.
+Additional file handlers can be added with <a class="reference internal" href="../../api/generated/meg_wiki.add_file_handler.html#meg_wiki.add_file_handler" title="meg_wiki.add_file_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_file_handler</span></code></a>.
 Each handler can be set to a different level than the logger.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -285,12 +285,12 @@ saved to any text file, e.g. a <code class="docutils literal notranslate"><span 
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/tempfile.html#tempfile.TemporaryDirectory" title="tempfile.TemporaryDirectory" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">directory</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/tempfile.html#tempfile.TemporaryDirectory" title="tempfile.TemporaryDirectory" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-class"><span class="n">TemporaryDirectory</span></a><span class="p">()</span>
 <a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="pathlib.Path" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class"><span class="n">Path</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">directory</span><span class="o">.</span><span class="n">name</span></a><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;mylogs.log&quot;</span>
-<a href="../../api/generated/meg_info.add_file_handler.html#meg_info.add_file_handler" title="meg_info.add_file_handler" class="sphx-glr-backref-module-meg_info sphx-glr-backref-type-py-function"><span class="n">add_file_handler</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file</span></a><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">)</span>  <span class="c1"># different level than the logger</span>
+<a href="../../api/generated/meg_wiki.add_file_handler.html#meg_wiki.add_file_handler" title="meg_wiki.add_file_handler" class="sphx-glr-backref-module-meg_wiki sphx-glr-backref-type-py-function"><span class="n">add_file_handler</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file</span></a><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">)</span>  <span class="c1"># different level than the logger</span>
 <a href="https://docs.python.org/3/library/logging.html#logging.Logger.debug" title="logging.Logger.debug" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-method"><span class="n">logger</span><span class="o">.</span><span class="n">debug</span></a><span class="p">(</span><span class="s2">&quot;Log displayed but not saved to file.&quot;</span><span class="p">)</span>
 <a href="https://docs.python.org/3/library/logging.html#logging.Logger.info" title="logging.Logger.info" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-method"><span class="n">logger</span><span class="o">.</span><span class="n">info</span></a><span class="p">(</span><span class="s2">&quot;Log displayed and saved to file.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[00_logging:&lt;module&gt;:55] DEBUG: Log displayed but not saved to file. (2023-07-11 14:48:58,768)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[00_logging:&lt;module&gt;:55] DEBUG: Log displayed but not saved to file. (2023-07-11 15:14:56,592)
 [00_logging.&lt;module&gt;] INFO: Log displayed and saved to file.
 </pre></div>
 </div>
@@ -321,10 +321,10 @@ while it might be mantadory depending on the situation on Windows.</p>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">logger</span><span class="o">.</span><span class="n">handlers</span></a><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;StreamHandler (NOTSET)&gt;, &lt;FileHandler /tmp/tmpu8gp29af/mylogs.log (INFO)&gt;]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;StreamHandler (NOTSET)&gt;, &lt;FileHandler /tmp/tmpfr7_sqf0/mylogs.log (INFO)&gt;]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.566 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.662 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  9 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-tutorials-00-logging-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
