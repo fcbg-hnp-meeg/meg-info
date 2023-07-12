@@ -295,7 +295,22 @@ mounting procedure on the desktop.</p>
 <input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
 Windows</label><div class="sd-tab-content docutils">
-<p>WIP</p>
+<p>On Windows, you can mount a network drive in the file explorer from <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">PC</span></code>.
+In the menu bar, select <code class="docutils literal notranslate"><span class="pre">Computer</span></code> and <code class="docutils literal notranslate"><span class="pre">Map</span> <span class="pre">network</span> <span class="pre">drive</span></code>. Choose an
+available drive letter, set the field <code class="docutils literal notranslate"><span class="pre">Folder</span></code> to <code class="docutils literal notranslate"><span class="pre">\\$(address)</span></code> where
+<code class="docutils literal notranslate"><span class="pre">$(address)</span></code> is replaced with the network share address, and tick
+<code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">using</span> <span class="pre">different</span> <span class="pre">credentials</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="se">\\</span>fcbgnasc.campusbiotech.ch<span class="se">\f</span>cbgdata
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/windows-address.png"><img alt="_images/windows-address.png" class="align-center" src="_images/windows-address.png" style="width: 600px;" /></a>
+<p>A pop-up will requet your credentials. Enter your username and password.</p>
+<a class="only-dark reference internal image-reference" href="_images/windows-credentials-dark.png"><img alt="_images/windows-credentials-dark.png" class="only-dark align-center" src="_images/windows-credentials-dark.png" style="width: 400px;" /></a>
+<a class="only-light reference internal image-reference" href="_images/windows-credentials-light.png"><img alt="_images/windows-credentials-light.png" class="only-light align-center" src="_images/windows-credentials-light.png" style="width: 400px;" /></a>
+<p>The network share is now mounted and appears in the left pane as a network
+drive.</p>
+<img alt="_images/windows-connected-dark.png" class="only-dark align-center" src="_images/windows-connected-dark.png" />
+<img alt="_images/windows-connected-light.png" class="only-light align-center" src="_images/windows-connected-light.png" />
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
@@ -307,16 +322,16 @@ corresponding pop-up. In the address field, enter <code class="docutils literal 
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>smb://fcbgnasc.epfl.ch/fcbgdata
 </pre></div>
 </div>
-<img alt="_images/macos-address-dark.png" class="only-dark" src="_images/macos-address-dark.png" />
-<img alt="_images/macos-address-light.png" class="only-light" src="_images/macos-address-light.png" />
+<img alt="_images/macos-address-dark.png" class="only-dark align-center" src="_images/macos-address-dark.png" />
+<img alt="_images/macos-address-light.png" class="only-light align-center" src="_images/macos-address-light.png" />
 <p>A pop-up will request your credentials. Select <code class="docutils literal notranslate"><span class="pre">Registered</span> <span class="pre">User</span></code>, enter your
 username and password.</p>
-<img alt="_images/macos-credentials-dark.png" class="only-dark" src="_images/macos-credentials-dark.png" />
-<img alt="_images/macos-credentials-light.png" class="only-light" src="_images/macos-credentials-light.png" />
+<img alt="_images/macos-credentials-dark.png" class="only-dark align-center" src="_images/macos-credentials-dark.png" />
+<img alt="_images/macos-credentials-light.png" class="only-light align-center" src="_images/macos-credentials-light.png" />
 <p>The network share is now mounted and appears in the left pane as an external
 drive.</p>
-<img alt="_images/macos-connected-dark.png" class="only-dark" src="_images/macos-connected-dark.png" />
-<img alt="_images/macos-connected-light.png" class="only-light" src="_images/macos-connected-light.png" />
+<img alt="_images/macos-connected-dark.png" class="only-dark align-center" src="_images/macos-connected-dark.png" />
+<img alt="_images/macos-connected-light.png" class="only-light align-center" src="_images/macos-connected-light.png" />
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
@@ -333,13 +348,13 @@ bottom, in the field <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>smb://fcbgnasc.campusbiotech.ch/fcbgdata
 </pre></div>
 </div>
-<img alt="_images/linux-address-dark.png" class="only-dark" src="_images/linux-address-dark.png" />
-<img alt="_images/linux-address-light.png" class="only-light" src="_images/linux-address-light.png" />
+<img alt="_images/linux-address-dark.png" class="only-dark align-center" src="_images/linux-address-dark.png" />
+<img alt="_images/linux-address-light.png" class="only-light align-center" src="_images/linux-address-light.png" />
 <p>A pop-up will request your credentials. Select <code class="docutils literal notranslate"><span class="pre">Registered</span> <span class="pre">User</span></code>, enter your
 username, domain (<code class="docutils literal notranslate"><span class="pre">campusbiotech.ch</span></code>, <code class="docutils literal notranslate"><span class="pre">epfl.ch</span></code> or <code class="docutils literal notranslate"><span class="pre">unige.ch</span></code>) and
 password.</p>
-<img alt="_images/linux-credentials-dark.png" class="only-dark" src="_images/linux-credentials-dark.png" />
-<img alt="_images/linux-credentials-light.png" class="only-light" src="_images/linux-credentials-light.png" />
+<img alt="_images/linux-credentials-dark.png" class="only-dark align-center" src="_images/linux-credentials-dark.png" />
+<img alt="_images/linux-credentials-light.png" class="only-light align-center" src="_images/linux-credentials-light.png" />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>On the <a class="reference internal" href="stim-pc.html#stimulation-pc"><span class="std std-ref">Stimulation PC</span></a> or the
@@ -349,8 +364,8 @@ Please select <code class="docutils literal notranslate"><span class="pre">Forge
 </div>
 <p>The network share is now mounted and appears in the left pane as an external
 drive.</p>
-<img alt="_images/linux-connected-dark.png" class="only-dark" src="_images/linux-connected-dark.png" />
-<img alt="_images/linux-connected-light.png" class="only-light" src="_images/linux-connected-light.png" />
+<img alt="_images/linux-connected-dark.png" class="only-dark align-center" src="_images/linux-connected-dark.png" />
+<img alt="_images/linux-connected-light.png" class="only-light align-center" src="_images/linux-connected-light.png" />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>On the <a class="reference internal" href="stim-pc.html#stimulation-pc"><span class="std std-ref">Stimulation PC</span></a> or the
